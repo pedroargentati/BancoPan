@@ -2,7 +2,28 @@
     <header>
         <img src="../../../assets/images/logos/1563334472wpdm_banco-pan-logo.svg" alt="">
     </header>
-    <div class="form-login">
+    <div class="form-login" *ngIf="step === 1">
+        <img src="../../../assets/images/undraw_secure_login_pdn4.svg" alt="">
+        <div class="linha-vertical"></div>
+
+        <form action="">
+            <h1>Entre na sua conta e PAN</h1>
+            <div class="input-group">
+                <input type="text" placeholder="CPF" class="input" required>
+                <span class="border-bottom"></span>
+            </div>
+            <div class="input-group">
+                <input type="text" placeholder="Senha" class="input" required>
+                <span class="border-bottom"></span>
+            </div>
+
+            <input type="button" (click)="step = 2" value="Entrar">
+            
+        </form>
+
+    </div>
+
+    <div class="form-login" *ngIf="step===2">
         <img src="../../../assets/images/undraw_updates_re_o5af.svg" alt="">
         <div class="linha-vertical"></div>
 
@@ -24,7 +45,38 @@
                 <input type="text" placeholder="E-mail" class="input" required>
                 <span class="border-bottom"></span>
             </div>
+
+            <input type="button" (click)="step = 3" value="Entrar">
         </form>
+
+    </div>
+
+    <div class="form-login" *ngIf="step === 3">
+        <img src="../../../assets/images/undraw_updates_re_o5af.svg" alt="">
+        <div class="linha-vertical"></div>
+
+        <form action="">
+            <h1>Atualize seus dados!</h1>
+            <div class="input-group">
+                <input type="text" placeholder="nome campo" class="input" required>
+                <span class="border-bottom"></span>
+            </div>
+            <div class="input-group">
+                <input type="text" placeholder="nome campo" class="input" required>
+                <span class="border-bottom"></span>
+            </div>
+            <div class="input-group">
+                <input type="text" placeholder="nome campo" class="input" required>
+                <span class="border-bottom"></span>
+            </div>
+            <div class="input-group">
+                <input type="text" placeholder="nome campo" class="input" required>
+                <span class="border-bottom"></span>
+            </div>
+
+            <input type="button" (click)="step = 4" value="Entrar">
+        </form>
+
     </div>
     <footer>
         <h1>Direitos reservado @The Interns</h1>

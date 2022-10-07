@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./client-area.component.scss']
 })
 export class ClientAreaComponent implements OnInit {
+  public step: number = 1;
 
   constructor() { }
 

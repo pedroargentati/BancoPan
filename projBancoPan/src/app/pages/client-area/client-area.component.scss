@@ -9,10 +9,7 @@
         justify-content: center;
         text-align: center;
 
-        img{
-            margin-left: 80px;
-        }
-
+        
         .linha-vertical {
             height: 460px;
             margin-left: 137px;
@@ -68,6 +65,16 @@
             .input:valid + .border-bottom {
                 transform: scaleX(1);
             }
+
+            input[type="button"]{
+                background: #00C5FF;
+                color: #fff;
+                border: 0px;
+                width: 145px;
+                height: 43px;
+                border-radius: 10px;
+                margin-top: 50px;   
+            }   
         }
     }
 
