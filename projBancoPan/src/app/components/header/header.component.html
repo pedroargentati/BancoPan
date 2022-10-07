@@ -8,11 +8,16 @@
         </button>
         <div class="navbar-collapse" id="collapseBasic" [ngClass]="{'open': collapsed}">
             <ul class="navbar-nav ml-auto">
-                <li>
-                    <a [routerLink]="['/abrir-conta']">
-                      <button class="register">Abrir conta</button>
-                    </a>
-                </li>
+              <li>
+                <a [routerLink]="['/area-cliente']">
+                  <button class="client">Já sou cliente</button>
+                </a>
+              </li>
+              <li>
+                  <a [routerLink]="['/abrir-conta']">
+                     <button class="register">Abrir conta</button>
+                  </a>
+              </li>
             </ul>
         </div>
     </div>

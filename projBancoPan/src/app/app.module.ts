@@ -8,6 +8,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { HomeComponent } from './pages/home/home.component';
 import { HeaderComponent } from './components/header/header.component';
 import { CreateAccountComponent } from './pages/create-account/create-account.component';
+import { ClientAreaComponent } from './pages/client-area/client-area.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { CreateAccountComponent } from './pages/create-account/create-account.co
     HomeComponent,
     HeaderComponent,
     CreateAccountComponent,
+    ClientAreaComponent,
 
   ],
   imports: [
