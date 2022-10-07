@@ -754,18 +754,23 @@ footer{
       width: 100%;
     }
   }
-  .implementation{
-    h2{
-      margin-bottom: 30px;
-      margin-top: 50px;
+  .implementation {
+    h2 {
+      text-align: center;
+      margin: 40px 0;
     } 
-    .image{
+    .image {
       margin-top: 0px;
     }
     p{
       margin-bottom: 40px;
     }
   }
+
+  .firt-card {
+    margin-top: 3.5rem;
+  }
+
   .info-more {
     .card{
       margin-bottom: 20px;

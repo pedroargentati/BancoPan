@@ -117,7 +117,7 @@ header{
   }
 
   @media (max-width: 991px){
-    nav{
+    nav {
       height: 60px;
       padding: 0px 15px;
       .navbar-collapse {
@@ -152,6 +152,18 @@ header{
         margin-top: 0px;
         margin-left: 1em;
       }
+    }
+
+    .navbar-nav {
+      margin-top: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .navbar-nav li {
+      margin-top: 0.5rem;
     }
   }
 
