@@ -1,7 +1,10 @@
+* {
+  font-family: 'Poppins', sans-serif;
+}
+
 header{
   nav{
     height: 120px;
-    font-family: 'Maison Neue';
     padding: 0px;
     width: 100%;
 
@@ -37,10 +40,9 @@ header{
       color: #000;
     }
 
-    .register{
+    .register {
       background: #00C5FF;
       color: #fff;
-      font-family: Maison Neue;
       font-weight: 500;
       border: 0px;
       padding: 8px 20px;
@@ -51,10 +53,9 @@ header{
       border-radius: 10px;
     }
 
-    .client{
+    .client {
       background: #9E9E9E;
       color: #fff;
-      font-family: Maison Neue;
       font-weight: 500;
       border: 0px;
       padding: 8px 20px;
@@ -63,6 +64,26 @@ header{
       width: 145px;
       height: 43px;
       border-radius: 10px;
+    }
+
+    .register:hover {
+      background-color: #03A9F4;
+      font-weight: 900;
+      letter-spacing: 1px;
+      stroke-width: 5;
+      stroke-dasharray: 15, 310;
+      stroke-dashoffset: 48;
+      transition: all 1.35s cubic-bezier(0.19, 1, 0.22, 1);
+    }
+
+    .client:hover {
+      background-color: #757575;
+      font-weight: 900;
+      letter-spacing: 1px;
+      stroke-width: 5;
+      stroke-dasharray: 15, 310;
+      stroke-dashoffset: 48;
+      transition: all 1.35s cubic-bezier(0.19, 1, 0.22, 1);
     }
     
     .navbar-toggler{
@@ -117,7 +138,7 @@ header{
         }
       }
 
-      a{
+      a {
         color: #000;
         height: 40px;
       }
