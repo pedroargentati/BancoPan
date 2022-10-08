@@ -9,6 +9,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { HeaderComponent } from './components/header/header.component';
 import { CreateAccountComponent } from './pages/create-account/create-account.component';
 import { ClientAreaComponent } from './pages/client-area/client-area.component';
+import { NgxMaskModule } from 'ngx-mask';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,10 @@ import { ClientAreaComponent } from './pages/client-area/client-area.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    NgxMaskModule.forRoot({
+      dropSpecialCharacters: false
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent]
