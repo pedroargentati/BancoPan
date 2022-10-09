@@ -424,6 +424,23 @@
     font-weight: 600;
   }
 
+  .table-bds-title {
+    margin-top: 3rem;
+    text-align: center;
+  }
+
+  .tables-dbs {
+    margin-top: 3rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    .tables-bds-img {
+      width: 30%;
+      margin-right: 2rem;
+    }
+  }
+
   .table-cloud {
     display: flex;
     justify-content: center;
@@ -470,6 +487,7 @@
       margin-bottom: 20px;
       margin-top: 12px;
     }
+
     .pages-title {
       color: #FFF;
       text-align: center;
