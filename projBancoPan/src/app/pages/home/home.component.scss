@@ -172,6 +172,7 @@
   .items {
     max-width: 600px;
     margin: 0 auto;
+
     span {
       font-weight: 600;
       color: #29B6F6;
@@ -195,7 +196,7 @@
         // list-style: none;
         font-size: 16px;
         text-align: start;
-       
+
       }
 
       img {
@@ -304,7 +305,7 @@
   font-family: 'Poppins', sans-serif;
   background-color: #00C5FF;
   color: #fff;
-  
+
   h2 {
     font-size: 25px;
     font-weight: 600;
@@ -462,6 +463,22 @@
   padding-top: 80px;
   font-family: 'Poppins', sans-serif;
   background-color: #F5F5F5;
+
+  span {
+    color: #00C5FF;
+    font-weight: 600;
+  }
+
+  .table-cloud {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    h4 {
+      margin: 1.3rem 0;
+    }
+  }
 
   h2 {
     margin-top: 20px;
@@ -835,13 +852,21 @@ footer {
 }
 
 @media (max-width: 1200px) {
+
+  .table-cloud {
+    img {
+      width: 364px;
+    }
+  }
+
   .implementation {
     margin-top: 3rem;
   }
+
   .channels {
     margin-top: -160px;
   }
-  
+
 }
 
 @media (max-width: 767px) {
