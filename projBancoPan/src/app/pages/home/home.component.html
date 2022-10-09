@@ -1,14 +1,50 @@
 <div class="main">
   <app-header></app-header>
 
+  <div class="implementation">
+    <div class="container-fluid">
+      <div class="row row-column-reverse-mobile">
+        <div class="col-md-5">
+
+        </div>
+        <div class="col-md-7">
+          <h2>Serviços Banco PAN</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="info-about">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="firt-card col-md-3">
+          <div class="card">
+            <h2>Nova base de dados</h2>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card">
+            <h2>Cloud</h2>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card">
+            <h2>API</h2>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card">
+            <h2>ETL</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <div class="banner" id="topo">
     <div class="container">
       <div class="row">
         <div class="col-md-7">
-          <h2>Um cartão
-            todinho
-            pra você!</h2>
+          <h2>vai cutintia</h2>
 
           <a [routerLink]="['/abrir-conta']"><button>Experimente</button> </a>
         </div>
@@ -17,33 +53,49 @@
     </div>
   </div>
 
+  
 
   <div class="possibilities" id="funcionalidades">
     <div class="container">
       <div class="row">
         <div class="col">
-          <h2>Conta Grátis e
-            100% digital</h2>
-          <p>Uma conta todinha pensada pra você comandar a sua vida financeira pelo celular.</p>
+          <h2>Nova base de Dados</h2>
+          <p>A primeira etapa de nossa proposta será criar uma nova base de dados SQL Server na nuvem. Modelamos sua
+            estrutura tornando-a totalmente normalizada, evitando assim redundâncias, inconsistências e possibilitando
+            futuros crescimentos.</p>
+          <h4 style="text-align:center;">Mas qual iremos escolher?</h4>
         </div>
       </div>
       <div class="items">
         <div class="row">
           <div class="col-md-6">
             <div class="item">
-              <h4>titulo</h4>
+              <h4>SQL Server</h4>
               <span class="detail"></span>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, praesentium!
-              </p>
+              <ul>
+                <li><span>Manutenção: </span>As tabelas armazenam índice - organizado.</li>
+                <li><span>Proteção: </span>Logins autenticados no nível da instância e no banco de dados.</li>
+                <li><span>Suporte: </span>Fornece notas técnicas, descrições de erros, scripts, sem custo adicional.
+                </li>
+                <li><span>Backup: </span>Permite backups completos, parciais e incrementais</li>
+              </ul>
             </div>
           </div>
           <div class="col-md-6">
             <div class="item">
-              <h4>titulo</h4>
+              <h4>Oracle</h4>
               <span class="detail"></span>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, in.</p>
+              <ul>
+                <li><span>Manutenção: </span>Atualização estatística automática</li>
+                <li><span>Proteção: </span>Usuário autenticado via token de banco de dados</li>
+                <li><span>Suporte:</span>Chamada de suporte cobrada por cada caso de suporte.</li>
+                <li><span>Backup: </span>Backups de BD completos, nível de arquivo, incrementais e diferenciais.</li>
+              </ul>
             </div>
           </div>
+          <p class="why">Escolhemos o <span>SQL Server</span> pelo fato do <span>Banco PAN</span> já utilizar este Banco de Dados e poderemos reutilizar a
+            instância deles. Além deste fato, o SQL da microsoft é um dos <span>melhores do mercados</span>, e um dos mais atuais,
+            assim gerando <span>confiabilidade e qualidade</span>.</p>
         </div>
       </div>
     </div>
@@ -108,44 +160,7 @@
         </div>
       </div>
     </div> -->
-  <div class="implementation">
-    <div class="container-fluid">
-      <div class="row row-column-reverse-mobile">
-        <div class="col-md-5">
 
-        </div>
-        <div class="col-md-7">
-          <h2>Serviços Banco PAN</h2>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="info-about">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="firt-card col-md-3">
-          <div class="card">
-            <h2>Financiamento de Veículos</h2>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="card">
-            <h2>Empréstimo FGTS</h2>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="card">
-            <h2>Cartão de crédito</h2>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="card">
-            <h2>Empréstimo consignado</h2>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
   <!-- <div class="video">
       <div class="container">
         <div class="row">
@@ -218,9 +233,10 @@
       <div class="row">
         <div class="col center">
           <h2><span>Quer</span> conhecer <br> <span>mais </span>sobre a nossa <span>proposta?!</span></h2>
-          <p>Faça o <span>download</span> do documento <span>completo</span> com a nossa prosta <span>mais
+          <p>Faça o <span>download</span> dos documentos <span>completos</span> com a nossa prosta <span>mais
               detalhada!</span></p>
-          <a href="../../../assets/files/propostatheinterns.pdf"><button>Download</button></a>
+          <a href="../../../assets/files/propostatheinterns.pdf"><button>Download do PDF</button></a>
+          <a href="../../../assets/files/script-ddl.txt"><button>Download do DDL</button></a>
         </div>
       </div>
     </div>
