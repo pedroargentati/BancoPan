@@ -9,7 +9,9 @@ import { HomeComponent } from './pages/home/home.component';
 import { HeaderComponent } from './components/header/header.component';
 import { CreateAccountComponent } from './pages/create-account/create-account.component';
 import { ClientAreaComponent } from './pages/client-area/client-area.component';
-import { NgxMaskModule } from 'ngx-mask';
+import { InputMaskModule } from 'primeng/inputmask'
+import { StyleClassModule } from 'primeng/styleclass';
+import { InputTextModule } from 'primeng/inputtext';
 
 @NgModule({
   declarations: [
@@ -18,15 +20,14 @@ import { NgxMaskModule } from 'ngx-mask';
     HeaderComponent,
     CreateAccountComponent,
     ClientAreaComponent,
-
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FontAwesomeModule,
-    NgxMaskModule.forRoot({
-      dropSpecialCharacters: false
-    }),
+    InputMaskModule,
+    StyleClassModule,
+    InputTextModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
