@@ -4,18 +4,12 @@
 
 header{
   nav{
-    height: 120px;
+    height: 90px;
     padding: 0px;
     width: 100%;
 
-    .logo{
-      width: 150px;
-      margin-top: 0px;
-    }
-
-    .facebook{
-      width: 120px;
-      margin-left: 20px;
+    img{
+      margin-right: 9rem;
     }
 
     .nav-link{
@@ -25,6 +19,15 @@ header{
       font-weight: 400;
       margin-top: 10px;
       font-weight: 300;
+    }
+
+    .navbar-link{
+      margin-left: 50px;
+    }
+
+    .navbar-link:hover{
+      color: #666666;
+      text-decoration: none;
     }
 
     .navbar-brand{
