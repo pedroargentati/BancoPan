@@ -41,7 +41,7 @@
         </div>
         <div class="col-md-3">
           <div class="card">
-            <h2><a href="">Padrinização</a></h2>
+            <h2><a href="#padronizacao">Padrinização</a></h2>
           </div>
         </div>
         <div class="col-md-3">
@@ -107,70 +107,100 @@
       <div class="row">
         <div class="col">
           <h2>Cloud <span>Banco Pan</span></h2>
-          <p>Como citado, iremos criar uma nova database já em nuvem e o serviço que utilizaremos é o <span>Cloud SQL for SQL
-            Server</span> da Google. Comparamos as pioneiras da Cloud Computing e, além de ter o <span>preço mais acessível</span>, atende a
-           <span> todas as necessidades</span> que o banco Pan necessita, como:
+          <p>Como citado, iremos criar uma nova database já em nuvem e o serviço que utilizaremos é o <span>Cloud SQL
+              for SQL
+              Server</span> da Google. Comparamos as pioneiras da Cloud Computing e, além de ter o <span>preço mais
+              acessível</span>, atende a
+            <span> todas as necessidades</span> que o banco Pan necessita, como:
           </p>
 
-      <div class="table-cloud">
-        <h4>Disponibilidade</h4>
-        <img src="../../../assets/images/disponibilidade.png" alt="">
-      </div>
+          <div class="table-cloud">
+            <h4>Disponibilidade</h4>
+            <img src="../../../assets/images/disponibilidade.png" alt="">
+          </div>
 
-      <div class="table-cloud">
-        <h4>Disaster Recovery</h4>
-        <img src="../../../assets/images/disasterrecovery.png" alt="">
-      </div>
+          <div class="table-cloud">
+            <h4>Disaster Recovery</h4>
+            <img src="../../../assets/images/disasterrecovery.png" alt="">
+          </div>
 
-      <div class="table-cloud">
-        <h4>Escalabilidade</h4>
-        <img src="../../../assets/images/escalabilidade.png" alt="">
-      </div>
+          <div class="table-cloud">
+            <h4>Escalabilidade</h4>
+            <img src="../../../assets/images/escalabilidade.png" alt="">
+          </div>
 
-      <div class="table-cloud">
-        <h4>Segurança</h4>
-        <img src="../../../assets/images/seguranca.png" alt="">
-      </div>
+          <div class="table-cloud">
+            <h4>Segurança</h4>
+            <img src="../../../assets/images/seguranca.png" alt="">
+          </div>
         </div>
       </div>
     </div>
     <div class="background">
-      <div class="pages">
+      <div class="pages" id="padronizacao">
         <div class="container">
           <div class="row">
+            <h2 class="pages-title">Despadronização dos Dados</h2>
+            <p class="pages-p">Agora, focando na despadronização dos dados (quando os usuários inserem o mesmo tipo de
+              informação de
+              maneiras distintas), iremos fazer uma validação no front end da aplicação, utilizando máscaras, para que
+              essas cheguem no back-end já normalizados.</p>
             <div class="col-md-6">
-              <img style="margin-top: 32px" src="../../../assets/images/undraw_pay_online_re_aqe6.svg" alt=""
-                class="img-fluid">
+              <img style="margin-top: 32px" src="../../../assets/images/rest.svg" alt="" class="img-fluid">
             </div>
             <div class="col-md-6">
-              <p> <span>Maquininha Turbo PAN</span><br><br>
+              <p> <span>Padronização dos Documentos</span><br><br>
 
-                Receba o dinheiro das vendas em 1 dia útil direto na sua conta digital PAN.</p>
+                Tratando dos documentos, começando pelo CPF, verificaremos sua validez através de seus dígitos. Já
+                outros documentos (RG e CNH) serão validados através de fotos tiradas pelo próprio cliente feitas com
+                reconhecimento de imagem.
+              </p>
             </div>
           </div>
           <div class="row row-column-reverse-mobile">
             <div class="col-md-6">
-              <p> <span>Open Finance</span><br><br>
+              <p> <span>Inteligência Artificial</span><br><br>
 
-                Tá precisando de um crédito melhor no mercado? Com o Open Finance suas chances podem melhorar!</p>
+                Isso será feito por meio de uma inteligência artificial criada com Python, que receberá o documento
+                escolhido pelo cliente, extrairá os dados desses, e cadastrar no banco. Só que, antes disso, será
+                exposto para o usuário um formulário com todos os dados inseridos para serem confirmados.</p>
             </div>
             <div class="col-md-6">
-              <img src="../../../assets/images/undraw_mobile_pay_re_sjb8 (1).svg" alt="" class="img-fluid">
+              <img src="../../../assets/images/api.svg" alt="" class="img-fluid">
             </div>
           </div>
           <div class="row">
             <div class="col-md-6">
-              <img src="../../../assets/images/undraw_shopping_app_flsj.svg" alt="" class="img-fluid">
+              <img src="../../../assets/images/apirest.svg" alt="" class="img-fluid">
             </div>
             <div class="col-md-6">
-              <p> <span>Loja PAN no APP</span><br><br>
+              <p> <span>Autenticação</span><br><br>
 
-                O site da loja não está mais no ar, mas ela mudou pro nosso app com uma nova experiência! Vem dar uma
-                olhada!
-                Todo saldo de cashback será depositado na sua Conta PAN conforme o regulamento, sem precisar solicitar
-                resgate. Se tiver dúvidas, fale com a gente ou acesse o regulamento.</p>
+                Em relação ao e-mail e telefone, utilizaremos o método de autenticação JWT (JSON Web Token). Após ter um
+                login e senha validados pelo servidor, será criado um token que o usuário receberá em resposta e que
+                permitirá o acesso a algum recurso. Essas informações são mantidas na máquina do cliente, e não no
+                servidor (Stateless).</p>
             </div>
           </div>
+          <div class="row row-column-reverse-mobile">
+            <div class="col-md-6">
+              <p> <span>Validação de Endereços</span><br><br>
+
+                Por último, no endereço, utilizaremos a API ViaCEP que valida o CEP e, caso exista, retorna dados
+                complementares do mesmo, restando ao cliente apenas inserir o número e complemento.
+              </p>
+            </div>
+            <div class="col-md-6">
+              <img src="../../../assets/images/browser.svg" alt="" class="img-fluid">
+            </div>
+          </div>
+
+          <h3 class="pages-title">Transação de dados para o Banco de Dados</h3>
+          <span class="detail"></span>  
+          <p class="pages-p">Por fim, para enviar esses dados para o banco de dados, usaremos REST APIs, que são requisições que
+            permitem a comunicação de dados entre aplicações.
+          </p>
+
         </div>
       </div>
     </div>

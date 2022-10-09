@@ -506,11 +506,29 @@
     background: #1c96ae;
     width: 100%;
 
+    span.detail {
+      width: 250px;
+      height: 2px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      background-color: #00C5FF;
+      margin-bottom: 20px;
+      margin-top: 12px;
+    }
+    .pages-title {
+      color: #FFF;
+      text-align: center;
+      margin: 2.2rem auto;
+      margin-bottom: 0rem;
+    }
+
     p {
       margin-top: 60px;
-      font-size: 20px;
-      text-align: left;
+      font-size: 19px;
+      text-align: center;
       color: #fff;
+      margin-bottom: 3rem;
 
       span {
         font-size: 24px;
