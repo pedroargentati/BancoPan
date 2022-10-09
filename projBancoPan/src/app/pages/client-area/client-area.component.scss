@@ -223,26 +223,4 @@
 
   }
 
-  @media (max-width: 400px) {
-
-    body {
-      overflow-x: hidden;
-      scrollbar-width: none;
-    }
-
-    .form-group {
-      width: 354px;
-
-      img {
-        margin-top: 3.5rem;
-        width: 290px;
-      }
-    }
-
-    .input-submit {
-      width: 70% !important;
-      margin-top: 2.4rem !important;
-    }
-
-  }
 }
