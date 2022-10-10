@@ -1,0 +1,48 @@
+
+<header>  
+  <nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#topo"> <img src="../../../assets/images/logos/1563334472wpdm_banco-pan-logo.svg" alt=""></a>
+        <ul class="navbar-nav ml-auto none">
+          <li>
+            <a class="navbar-link" href="#banco-dados">
+             Banco de dados
+            </a>
+          </li>
+          <li>
+            <a  class="navbar-link" href="#cloud">
+             Cloud
+            </a>
+          </li>
+          <li>
+            <a  class="navbar-link" href="#padronizacao">
+              Padronização
+            </a>
+          </li>
+          <li>
+            <a  class="navbar-link" href="#cloud">
+              ETL
+            </a>
+          </li>
+         
+        </ul>
+        <button class="navbar-toggler" (click)="collapsed=!collapsed" type="button" aria-expanded="false" aria-label="Toggle navigation"> 
+          <img src="../../../assets/images/menu.svg" alt="">
+        </button>
+        <div class="navbar-collapse" id="collapseBasic" [ngClass]="{'open': collapsed}">
+            <ul class="navbar-nav ml-auto">
+              <li>
+                <a [routerLink]="['/area-cliente']">
+                  <button class="client">Já sou cliente</button>
+                </a>
+              </li>
+              <li>
+                  <a [routerLink]="['/abrir-conta']">
+                     <button class="register">Abrir conta</button>
+                  </a>
+              </li>
+            </ul>
+        </div>
+    </div>
+  </nav>
+</header>

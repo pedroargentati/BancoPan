@@ -1,0 +1,255 @@
+<div class="main">
+  <app-header></app-header>
+
+  <div class="banner" id="topo">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <h2>The Interns</h2>
+
+          <div class="nomes">
+            <ul>
+              <li>Felipe Otto <span>89108</span> </li>
+              <li>Pedro Argentati <span>88246</span></li>
+              <li>Pedro Henrique Castanheira <span>89199</span></li>
+              <li>Rafael Tannous <span>87486</span></li>
+              <li>Yasmin Verderame <span>87023</span> </li>
+            </ul>
+          </div>
+          <!-- <a [routerLink]="['/abrir-conta']"><button>Experimente</button> </a> -->
+        </div>
+
+        <div class="col imagem-mobile">
+          <img class="img-group" src="../../../assets/images/undraw_team_collaboration_re_ow29.svg" alt="">
+        </div>
+        <img class ="img-mobile-group" src="../../../assets/images/undraw_team_collaboration_re_ow29.svg" alt="">
+
+      </div>
+    </div>
+  </div>
+
+  <div class="implementation">
+    <div class="container-fluid">
+      <div class="row row-column-reverse-mobile">
+        <div class="col-md-5">
+
+        </div>
+        <div class="col-md-7">
+          <h2>Conheça nossa proposta</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="info-about">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="firt-card col-md-3">
+          <div class="card">
+            <h2><a href="#banco-dados">Banco de Dados</a></h2>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card">
+            <h2><a href="#cloud">Cloud</a></h2>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card">
+            <h2><a href="#padronizacao">Padronização</a></h2>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card">
+            <h2><a href="">ETL</a></h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="banco-dados" id="banco-dados">
+    <div class="container">
+      <div class="introduction">
+        <h2>Banco de Dados</h2>
+        <p style="margin-top: 25px;">A primeira etapa de nossa proposta será criar uma <span>nova base de dados SQL Server na nuvem</span>.
+        Modelamos sua estrutura tornando-a totalmente normalizada, evitando assim redundâncias, inconsistências e possibilitando futuros crescimentos.</p>    
+        <h4>Mas qual iremos escolher?</h4>  
+      </div>
+  
+      <div class="items">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="item">
+              <h4>SQL Server</h4>
+              <span class="detail"></span>
+              <ul>
+                <li><span>Manutenção: </span>As tabelas armazenam índice - organizado.</li>
+                <li><span>Proteção: </span>Logins autenticados no nível da instância e no banco de dados.</li>
+                <li><span>Suporte: </span>Fornece notas técnicas, descrições de erros, scripts, sem custo adicional.
+                </li>
+                <li><span>Backup: </span>Permite backups completos, parciais e incrementais</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="item">
+              <h4>Oracle</h4>
+              <span class="detail"></span>
+              <ul>
+                <li><span>Manutenção: </span>Atualização estatística automática</li>
+                <li><span>Proteção: </span>Usuário autenticado via token de banco de dados</li>
+                <li><span>Suporte: </span>Chamada de suporte cobrada por cada caso de suporte.</li>
+                <li><span>Backup: </span>Backups de BD completos, nível de arquivo, incrementais e diferenciais.</li>
+              </ul>
+            </div>
+          </div>
+          <p class="why">Escolhemos o <span>SQL Server</span> pelo fato do <span>Banco PAN</span> já utilizar este Banco
+            de Dados e poderemos reutilizar a
+            instância deles. Além deste fato, o SQL da microsoft é um dos <span>melhores do mercados</span>, e um dos
+            mais atuais,
+            assim gerando <span>confiabilidade e qualidade</span>.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="about-bot-builder" id="cloud">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <h2>Cloud <span>Banco Pan</span></h2>
+          <p>Como citado, iremos criar uma nova database já em nuvem e o serviço que utilizaremos é o <span>Cloud SQL
+              for SQL
+              Server</span> da Google. Comparamos as pioneiras da Cloud Computing e, além de ter o <span>preço mais
+              acessível</span>, atende a
+            <span> todas as necessidades</span> que o banco Pan necessita, como:
+          </p>
+
+          <div class="table-cloud">
+            <h4>Disponibilidade</h4>
+            <img src="../../../assets/images/disponibilidade.png" alt="">
+          </div>
+
+          <div class="table-cloud">
+            <h4>Disaster Recovery</h4>
+            <img src="../../../assets/images/disasterrecovery.png" alt="">
+          </div>
+
+          <div class="table-cloud">
+            <h4>Escalabilidade</h4>
+            <img src="../../../assets/images/escalabilidade.png" alt="">
+          </div>
+
+          <div class="table-cloud">
+            <h4>Segurança</h4>
+            <img src="../../../assets/images/seguranca.png" alt="">
+          </div>
+
+          <h4 class="table-bds-title">Preços</h4>
+          <div class="tables-dbs">
+            <img src="../../../assets/images/table-azure.jpeg" alt="" class="tables-bds-img">
+            <img src="../../../assets/images/table-amazonrds.jpeg" alt="" class="tables-bds-img">
+            <img src="../../../assets/images/table-cloud.jpeg" alt="" class="tables-bds-img">
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="background">
+      <div class="pages" id="padronizacao">
+        <div class="container">
+          <div class="row" style="margin-bottom: 70px;">
+            <h2 class="pages-title">Despadronização dos Dados</h2>
+            <p class="pages-p">Agora, focando na despadronização dos dados (quando os usuários inserem o mesmo tipo de
+              informação de
+              maneiras distintas), iremos fazer uma validação no front end da aplicação, utilizando máscaras, para que
+              essas cheguem no back-end já normalizados.</p>
+            <div class="col-md-6">
+              <img style="margin-top: 32px" src="../../../assets/images/rest.svg" alt="" class="img-fluid">
+            </div>
+            <div class="col-md-6">
+              <p> <span>Padronização dos Documentos</span><br><br>
+
+                Tratando dos documentos, começando pelo CPF, verificaremos sua validez através de seus dígitos. Já
+                outros documentos (RG e CNH) serão validados através de fotos tiradas pelo próprio cliente feitas com
+                reconhecimento de imagem.
+              </p>
+            </div>
+          </div>
+          <div class="row row-column-reverse-mobile" style="margin-bottom: 70px;">
+            <div class="col-md-6">
+              <p> <span>Inteligência Artificial</span><br><br>
+
+                Isso será feito por meio de uma inteligência artificial criada com Python, que receberá o documento
+                escolhido pelo cliente, extrairá os dados desses, e cadastrar no banco. Só que, antes disso, será
+                exposto para o usuário um formulário com todos os dados inseridos para serem confirmados.</p>
+            </div>
+            <div class="col-md-6">
+              <img src="../../../assets/images/api.svg" alt="" class="img-fluid">
+            </div>
+          </div>
+          <div class="row" style="margin-bottom: 125px;">
+            <div class="col-md-6">
+              <img src="../../../assets/images/apirest.svg" alt="" class="img-fluid">
+            </div>
+            <div class="col-md-6">
+              <p> <span>Autenticação</span><br><br>
+
+                Em relação ao e-mail e telefone, utilizaremos o método de autenticação JWT (JSON Web Token). Após ter um
+                login e senha validados pelo servidor, será criado um token que o usuário receberá em resposta e que
+                permitirá o acesso a algum recurso. Essas informações são mantidas na máquina do cliente, e não no
+                servidor (Stateless).</p>
+            </div>
+          </div>
+          <div class="row row-column-reverse-mobile" style="margin-bottom: 110px;">
+            <div class="col-md-6">
+              <p> <span>Validação de Endereços</span><br><br>
+
+                Por último, no endereço, utilizaremos a API ViaCEP que valida o CEP e, caso exista, retorna dados
+                complementares do mesmo, restando ao cliente apenas inserir o número e complemento.
+              </p>
+            </div>
+            <div class="col-md-6">
+              <img src="../../../assets/images/browser.svg" alt="" class="img-fluid">
+            </div>
+          </div>
+
+          <h3 class="pages-title">Transação de dados para o Banco de Dados</h3>
+          <span class="detail"></span>  
+          <p class="pages-p">Para enviar esses dados para o banco de dados, usaremos REST APIs, que são requisições que
+            permitem a comunicação de dados entre aplicações.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="plans" id="planos">
+    <div class="container">
+      <div class="row">
+        <div class="col center">
+          <h2><span>Quer</span> conhecer <br> <span>mais </span>sobre a nossa <span>proposta?!</span></h2>
+          <p>Faça o <span>download</span> dos documentos <span>completos</span> com a nossa prosta <span>mais detalhada!</span></p>
+          <div class="buttons-download">
+            <a href="../../../assets/files/Documentacao.pdf"><button>Download do PDF</button></a>
+            <a href="../../../assets/files/script-ddl.txt"><button>Download do DDL</button></a>
+            <a href="../../../assets/files/diagrama.pdf"><button>Download do Diagrama</button></a>
+          </div>  
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="video">
+    <h2 class="video-title">Assista nosso Pitch!</h2>
+    <iframe width="100%" height="515" src="https://www.youtube.com/embed/UUx04SMIB94" frameborder="0"
+      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+
+
+  <footer>
+    <h2 class="footer-content">Copyright &#174; 2022 All rights reserved </h2>
+    <h2 class="footer-content">The Interns</h2>
+  </footer>
+</div>

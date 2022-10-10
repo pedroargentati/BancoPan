@@ -1,0 +1,532 @@
+
+
+CREATE TABLE cartao_credito (
+    codigo_cartao      VARCHAR(32) NOT NULL,
+    codigo_tipo_cartao int NOT NULL,
+    numero             int NOT NULL,
+    nome               VARCHAR(20) NOT NULL,
+    validade           DATE NOT NULL,
+    cvv                int NOT NULL,
+    codigo_produto     int NOT NULL
+);
+
+ALTER TABLE cartao_credito 
+ADD CONSTRAINT cartaopk 
+PRIMARY KEY ( codigo_cartao );
+
+ALTER TABLE cartao_credito 
+ADD CONSTRAINT cartaoun UNIQUE ( numero );
+
+
+
+CREATE TABLE cidade (
+    sigla_estado  VARCHAR(2) NOT NULL,
+    codigo_cidade int NOT NULL,
+    nome          VARCHAR(30) NOT NULL
+);
+
+ALTER TABLE cidade
+ADD CONSTRAINT cidadepk 
+PRIMARY KEY ( sigla_estado, codigo_cidade );
+
+
+
+CREATE TABLE cliente (
+    id_cliente           int NOT NULL,
+    nome                 VARCHAR(50) NOT NULL,
+    celular              VARCHAR(14) NOT NULL,
+    email                VARCHAR(60) NOT NULL,
+    data_nascimento      DATE NOT NULL,
+    sexo                 VARCHAR(1) NOT NULL,
+    renda                FLOAT NOT NULL,
+    codigo_endereco      int NOT NULL,
+    codigo_nacionalidade int NOT NULL,
+    patrimonio           FLOAT NOT NULL,
+    codigo_profissao     int NOT NULL
+);
+
+ALTER TABLE cliente 
+ADD CONSTRAINT clientepk 
+PRIMARY KEY ( id_cliente );
+
+ALTER TABLE cliente 
+ADD CONSTRAINT emailun 
+UNIQUE ( email );
+
+ALTER TABLE cliente 
+ADD CONSTRAINT celularun 
+UNIQUE ( celular );
+
+
+CREATE TABLE conta_digital (
+    codigo_conta      VARCHAR(32) NOT NULL,
+    codigo_tipo_conta int NOT NULL,
+    numero            VARCHAR(20) NOT NULL,
+    saldo             decimal(18, 2) NOT NULL,
+    limite            decimal(18, 2) NOT NULL,
+    data_abertura     DATE NOT NULL,
+    codigo_status     int NOT NULL,
+    codigo_produto    int NOT NULL
+);
+
+ALTER TABLE conta_digital 
+ADD CONSTRAINT contapk 
+PRIMARY KEY ( codigo_conta );
+
+ALTER TABLE conta_digital 
+ADD CONSTRAINT contaun 
+UNIQUE ( numero );
+
+
+
+
+CREATE TABLE contrato (
+    codigo_contrato VARCHAR(32) NOT NULL,
+    id_cliente      int NOT NULL,
+    codigo_produto  int NOT NULL,
+    data            DATE NOT NULL
+);
+
+ALTER TABLE contrato 
+ADD CONSTRAINT contratopk 
+PRIMARY KEY ( codigo_contrato );
+
+
+
+
+CREATE TABLE documento_cliente (
+    id_cliente       int NOT NULL,
+    cpf              VARCHAR(14) NOT NULL,
+    rg_numero        VARCHAR(12),
+    rg_emissao_data  DATE,
+    cnh_numero       varchar(11),
+    cnh_data_emissao DATE
+);
+
+ALTER TABLE documento_cliente 
+ADD CONSTRAINT documentoclientepk 
+PRIMARY KEY ( id_cliente );
+
+ALTER TABLE documento_cliente 
+ADD CONSTRAINT documentorgpk 
+UNIQUE ( rg_numero );
+
+ALTER TABLE documento_cliente 
+ADD CONSTRAINT documentocnhpk 
+UNIQUE ( cnh_numero );
+
+
+
+CREATE TABLE emprestimo (
+    codigo_emprestimo      VARCHAR(32) NOT NULL,
+    codigo_tipo_emprestimo int NOT NULL,
+    quantidade_parcela     int NOT NULL,
+    valor_parcela          decimal(18, 2) NOT NULL,
+    juros                  decimal(18, 2) NOT NULL,
+    valor_total            decimal(18, 2) NOT NULL,
+    codigo_produto         int NOT NULL
+);
+
+ALTER TABLE emprestimo 
+ADD CONSTRAINT emprestimopk 
+PRIMARY KEY ( codigo_emprestimo );
+
+
+
+CREATE TABLE endereco_cliente (
+    codigo_endereco int NOT NULL,
+    sg_est          VARCHAR(2) NOT NULL,
+    cd_cid          int NOT NULL,
+    cep             VARCHAR(9) NOT NULL,
+    bairro          VARCHAR(50) NOT NULL,
+    logradouro      VARCHAR(50) NOT NULL,
+    numero          int,
+    complemento     VARCHAR(50)
+);
+
+ALTER TABLE endereco_cliente 
+ADD CONSTRAINT endclientepk 
+PRIMARY KEY ( codigo_endereco );
+
+
+CREATE TABLE estado (
+    sigla_estado VARCHAR(2) NOT NULL,
+    nome         VARCHAR(30) NOT NULL
+);
+
+ALTER TABLE estado 
+ADD CONSTRAINT estado_pk 
+PRIMARY KEY ( sigla_estado );
+
+
+
+
+CREATE TABLE financiamento_veiculo (
+    codigo_financiamento VARCHAR(32) NOT NULL,
+    codigo_marca         int NOT NULL,
+    codigo_modelo        int NOT NULL,
+    placa                VARCHAR(8) NOT NULL,
+    descricao            VARCHAR(100) NOT NULL,
+    quantidade_parcela   int NOT NULL,
+    valor_parcela        decimal(18, 2) NOT NULL,
+    juros                decimal(18, 2) NOT NULL,
+    valor_total          decimal(18, 2) NOT NULL,
+    codigo_produto       int NOT NULL
+);
+
+ALTER TABLE financiamento_veiculo 
+ADD CONSTRAINT financiamentopk 
+PRIMARY KEY ( codigo_financiamento );
+
+ALTER TABLE financiamento_veiculo 
+ADD CONSTRAINT veiculoun 
+UNIQUE ( placa );
+
+
+
+CREATE TABLE leilao_veiculo (
+    codigo_leilao      VARCHAR(32) NOT NULL,
+    codigo_marca       int NOT NULL,
+    codigo_modelo      int NOT NULL,
+    placa              VARCHAR(15) NOT NULL,
+    descricao          VARCHAR(50) NOT NULL,
+    quantidade_parcela int NOT NULL,
+    valor_parcela      decimal(18, 2) NOT NULL,
+    codigo_produto     int NOT NULL
+);
+
+ALTER TABLE leilao_veiculo 
+ADD CONSTRAINT leilaopk 
+PRIMARY KEY ( codigo_leilao );
+
+
+
+CREATE TABLE maquina (
+    codigo_maquina         VARCHAR(32) NOT NULL,
+    codigo_tipo_maquina    int NOT NULL,
+    quantidade_total_venda int NOT NULL,
+    valor_total_venda      decimal(18, 2) NOT NULL,
+    codigo_produto         int NOT NULL
+);
+
+ALTER TABLE maquina 
+ADD CONSTRAINT maquinapk 
+PRIMARY KEY ( codigo_maquina );
+
+
+
+CREATE TABLE marca_veiculo (
+    codigo_marca int identity(1, 1) NOT NULL,
+    nome VARCHAR(50) NOT NULL
+);
+
+ALTER TABLE marca_veiculo 
+ADD CONSTRAINT marcapk 
+PRIMARY KEY ( codigo_marca );
+
+ALTER TABLE marca_veiculo 
+ADD CONSTRAINT marcaun 
+UNIQUE ( nome );
+
+
+
+CREATE TABLE modelo_veiculo (
+    codigo_marca  int NOT NULL,
+    codigo_modelo int NOT NULL,
+    nome          VARCHAR(50) NOT NULL
+);
+
+ALTER TABLE modelo_veiculo 
+ADD CONSTRAINT modelopk 
+PRIMARY KEY ( codigo_modelo, codigo_marca );
+
+
+
+CREATE TABLE nacionalidade (
+    codigo_nacionalidade int identity(1, 1) NOT NULL,
+    nome    VARCHAR(60) NOT NULL
+);
+
+ALTER TABLE nacionalidade 
+ADD CONSTRAINT nacionalidadepk 
+PRIMARY KEY ( codigo_nacionalidade );
+
+ALTER TABLE nacionalidade 
+ADD CONSTRAINT nacionalidadeun 
+UNIQUE ( nome );
+
+
+
+
+CREATE TABLE produto (
+    codigo_produto int identity(1, 1) NOT NULL,
+    nome           VARCHAR(50) NOT NULL
+);
+
+ALTER TABLE produto 
+ADD CONSTRAINT produtopk 
+PRIMARY KEY ( codigo_produto );
+
+ALTER TABLE produto 
+ADD CONSTRAINT produtoun 
+UNIQUE ( nome );
+
+
+
+
+CREATE TABLE profissao (
+    codigo_profissao int identity(1, 1) NOT NULL,
+    nome    VARCHAR(60) NOT NULL
+);
+
+ALTER TABLE profissao 
+ADD CONSTRAINT profissaopk 
+PRIMARY KEY ( codigo_profissao );
+
+ALTER TABLE profissao 
+ADD CONSTRAINT profissaoun 
+UNIQUE ( nome );
+
+
+
+CREATE TABLE saude_pan (
+    codigo_convenio uniqueidentifier NOT NULL,
+    codigo_plano    uniqueidentifier NOT NULL,
+    codigo_produto  int NOT NULL
+);
+
+ALTER TABLE saude_pan 
+ADD CONSTRAINT conveniopk 
+PRIMARY KEY ( codigo_convenio );
+
+
+
+CREATE TABLE saude_plano (
+    codigo_plano uniqueidentifier NOT NULL,
+    nome         VARCHAR(50)  NOT NULL
+);
+
+ALTER TABLE saude_plano 
+ADD CONSTRAINT saudeplanopk 
+PRIMARY KEY ( codigo_plano );
+
+
+
+CREATE TABLE seguro (
+    codigo_seguro      uniqueidentifier NOT NULL,
+    codigo_tipo_seguro int NOT NULL,
+    validade           DATE NOT NULL,
+    codigo_produto     int NOT NULL
+);
+
+ALTER TABLE seguro 
+ADD CONSTRAINT seguropk 
+PRIMARY KEY ( codigo_seguro );
+
+
+CREATE TABLE status_conta (
+    codigo_status int identity(1, 1) NOT NULL,
+    nome          VARCHAR(50)
+     NOT NULL
+);
+
+ALTER TABLE status_conta 
+ADD CONSTRAINT statuspk 
+PRIMARY KEY ( codigo_status );
+
+ALTER TABLE status_conta 
+ADD CONSTRAINT statuscontaun 
+UNIQUE ( nome );
+
+
+
+CREATE TABLE tipo_conta (
+    codigo_tipo_conta int identity(1, 1) NOT NULL,
+    nome              VARCHAR(50) NOT NULL
+);
+
+ALTER TABLE tipo_conta 
+ADD CONSTRAINT tpcontapk 
+PRIMARY KEY ( codigo_tipo_conta );
+
+ALTER TABLE tipo_conta 
+ADD CONSTRAINT tp_cont_nm_un 
+UNIQUE ( nome );
+
+
+
+
+CREATE TABLE tp_cartao_credito (
+    codigo_tipo_cartao int identity(1, 1) NOT NULL,
+    nome               VARCHAR(50)NOT NULL
+);
+
+ALTER TABLE tp_cartao_credito 
+ADD CONSTRAINT tpcartaopk 
+PRIMARY KEY ( codigo_tipo_cartao );
+
+ALTER TABLE tp_cartao_credito 
+ADD CONSTRAINT tpcartaoun 
+UNIQUE ( nome );
+
+
+
+
+CREATE TABLE tp_emprestimo (
+    codigo_tipo_emprestimo int identity(1, 1) NOT NULL,
+    nome      VARCHAR(50) NOT NULL
+);
+
+ALTER TABLE tp_emprestimo 
+ADD CONSTRAINT tpemprestimopk 
+PRIMARY KEY ( codigo_tipo_emprestimo );
+
+ALTER TABLE tp_emprestimo 
+ADD CONSTRAINT tpemprestimoun 
+UNIQUE ( nome );
+
+
+
+
+CREATE TABLE tp_maquina (
+    codigo_tipo_maquina int identity(1, 1) NOT NULL,
+    nome                VARCHAR(50) NOT NULL
+);
+
+ALTER TABLE tp_maquina 
+ADD CONSTRAINT tpmaquinapk 
+PRIMARY KEY ( codigo_tipo_maquina );
+
+ALTER TABLE tp_maquina 
+ADD CONSTRAINT maquinaun 
+UNIQUE ( nome );
+
+
+
+
+CREATE TABLE tp_seguro (
+    codigo_tipo_seguro int identity(1, 1) NOT NULL,
+    nome          VARCHAR(50) NOT NULL
+);
+
+ALTER TABLE tp_seguro 
+ADD CONSTRAINT tpseguropk 
+PRIMARY KEY ( codigo_tipo_seguro );
+
+ALTER TABLE tp_seguro 
+ADD CONSTRAINT tpseguroun 
+UNIQUE ( nome );
+
+
+
+-- FK's
+ALTER TABLE cartao_credito
+    ADD CONSTRAINT cartaoprodutofk FOREIGN KEY ( codigo_produto )
+        REFERENCES produto ( codigo_produto );
+
+ALTER TABLE cartao_credito
+    ADD CONSTRAINT cartaotpcartaofk FOREIGN KEY ( codigo_tipo_cartao )
+        REFERENCES tp_cartao_credito ( codigo_tipo_cartao );
+
+ALTER TABLE endereco_cliente
+    ADD CONSTRAINT cidadeendclientefk FOREIGN KEY ( sg_est,
+                                                    cd_cid )
+        REFERENCES cidade ( sigla_estado,
+                            codigo_cidade );
+
+ALTER TABLE cidade
+    ADD CONSTRAINT cidadeestadofk FOREIGN KEY ( sigla_estado )
+        REFERENCES estado ( sigla_estado );
+
+ALTER TABLE cliente
+    ADD CONSTRAINT clienteendclientefk FOREIGN KEY ( codigo_endereco )
+        REFERENCES endereco_cliente ( codigo_endereco );
+
+ALTER TABLE cliente
+    ADD CONSTRAINT clientenacionalidadefk FOREIGN KEY ( codigo_nacionalidade )
+        REFERENCES nacionalidade ( codigo_nacionalidade );
+
+ALTER TABLE cliente
+    ADD CONSTRAINT clienteprofissaofk FOREIGN KEY ( codigo_profissao )
+        REFERENCES profissao ( codigo_profissao );
+
+ALTER TABLE conta_digital
+    ADD CONSTRAINT contaprodutofk FOREIGN KEY ( codigo_produto )
+        REFERENCES produto ( codigo_produto );
+
+ALTER TABLE conta_digital
+    ADD CONSTRAINT contastatusfk FOREIGN KEY ( codigo_status )
+        REFERENCES status_conta ( codigo_status );
+
+ALTER TABLE conta_digital
+    ADD CONSTRAINT contatpcontafk FOREIGN KEY ( codigo_tipo_conta )
+        REFERENCES tipo_conta ( codigo_tipo_conta );
+
+ALTER TABLE contrato
+    ADD CONSTRAINT contratoclientefk FOREIGN KEY ( id_cliente )
+        REFERENCES cliente ( id_cliente );
+
+ALTER TABLE contrato
+    ADD CONSTRAINT contratoprodutofk FOREIGN KEY ( codigo_produto )
+        REFERENCES produto ( codigo_produto );
+
+ALTER TABLE saude_pan
+    ADD CONSTRAINT convenioplanofk FOREIGN KEY ( codigo_plano )
+        REFERENCES saude_plano ( codigo_plano );
+
+ALTER TABLE saude_pan
+    ADD CONSTRAINT convenioprodutofk FOREIGN KEY ( codigo_produto )
+        REFERENCES produto ( codigo_produto );
+
+ALTER TABLE documento_cliente
+    ADD CONSTRAINT documentoclientefk FOREIGN KEY ( id_cliente )
+        REFERENCES cliente ( id_cliente );
+
+ALTER TABLE emprestimo
+    ADD CONSTRAINT emprestimoprodutofk FOREIGN KEY ( codigo_produto )
+        REFERENCES produto ( codigo_produto );
+
+ALTER TABLE emprestimo
+    ADD CONSTRAINT emprestimotpemprestimofk FOREIGN KEY ( codigo_tipo_emprestimo )
+        REFERENCES tp_emprestimo ( codigo_tipo_emprestimo );
+
+ALTER TABLE financiamento_veiculo
+    ADD CONSTRAINT financiamentomodelofk FOREIGN KEY ( codigo_modelo,
+                                                       codigo_marca )
+        REFERENCES modelo_veiculo ( codigo_modelo,
+                                    codigo_marca );
+
+ALTER TABLE financiamento_veiculo
+    ADD CONSTRAINT financiamentoprodutofk FOREIGN KEY ( codigo_produto )
+        REFERENCES produto ( codigo_produto );
+
+ALTER TABLE leilao_veiculo
+    ADD CONSTRAINT leilaomodelofk FOREIGN KEY ( codigo_modelo,
+                                                codigo_marca )
+        REFERENCES modelo_veiculo ( codigo_modelo,
+                                    codigo_marca );
+
+
+ALTER TABLE leilao_veiculo
+    ADD CONSTRAINT leilaoprodutofk FOREIGN KEY ( codigo_produto )
+        REFERENCES produto ( codigo_produto );
+
+ALTER TABLE maquina
+    ADD CONSTRAINT maquinaprodutofk FOREIGN KEY ( codigo_produto )
+        REFERENCES produto ( codigo_produto );
+
+ALTER TABLE maquina
+    ADD CONSTRAINT maquinatpmaquinafk FOREIGN KEY ( codigo_tipo_maquina )
+        REFERENCES tp_maquina ( codigo_tipo_maquina );
+
+ALTER TABLE modelo_veiculo
+    ADD CONSTRAINT marcafk FOREIGN KEY ( codigo_marca )
+        REFERENCES marca_veiculo ( codigo_marca );
+
+ALTER TABLE seguro
+    ADD CONSTRAINT seguroprodutofk FOREIGN KEY ( codigo_produto )
+        REFERENCES produto ( codigo_produto );
+
+ALTER TABLE seguro
+    ADD CONSTRAINT segurotpsegurofk FOREIGN KEY ( codigo_tipo_seguro )
+        REFERENCES tp_seguro ( codigo_tipo_seguro );
