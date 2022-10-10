@@ -2,17 +2,13 @@
   font-family: 'Poppins', sans-serif;
 }
 
-header{
-  nav{
+header {
+  nav {
     height: 90px;
     padding: 0px;
     width: 100%;
-
-    img{
-      margin-right: 9rem;
-    }
-
-    .nav-link{
+    
+    .nav-link {
       color: #666666;
       font-size: 17px;
       padding: 0px 10px;
@@ -21,20 +17,20 @@ header{
       font-weight: 300;
     }
 
-    .navbar-link{
+    .navbar-link {
       margin-left: 50px;
     }
 
-    .navbar-link:hover{
+    .navbar-link:hover {
       color: #666666;
       text-decoration: none;
     }
 
-    .navbar-brand{
+    .navbar-brand {
       padding-left: 15px;
     }
 
-    .active-link{
+    .active-link {
       color: #7F35B2;
       font-weight: 500;
     }
@@ -88,41 +84,43 @@ header{
       stroke-dashoffset: 48;
       transition: all 1.35s cubic-bezier(0.19, 1, 0.22, 1);
     }
-    
-    .navbar-toggler{
+
+    .navbar-toggler {
       position: absolute;
       padding: 0;
       margin-left: 80%;
       margin-right: 5px;
       margin-top: 20px;
-      img{
+
+      img {
         width: 33px;
       }
     }
 
-    .navbar-toggler:focus{
+    .navbar-toggler:focus {
       box-shadow: none;
     }
 
-    .navbar-nav{
+    .navbar-nav {
       margin-left: auto;
     }
-    
+
   }
 
-  @media (max-width: 1199px){
-    nav{
-      .logo{
+  @media (max-width: 1199px) {
+    nav {
+      .logo {
         width: 180px;
         margin-top: 10px;
       }
     }
   }
 
-  @media (max-width: 991px){
+  @media (max-width: 991px) {
     nav {
       height: 60px;
       padding: 0px 15px;
+
       .navbar-collapse {
         background: #fff;
         position: absolute;
@@ -145,12 +143,13 @@ header{
         color: #000;
         height: 40px;
       }
-      .register{
+
+      .register {
         margin: 0 10px;
         margin-bottom: 15px;
       }
 
-      .facebook{
+      .facebook {
         width: 35%;
         margin-top: 0px;
         margin-left: 1em;
@@ -170,22 +169,33 @@ header{
     }
   }
 
-  @media (max-width: 756px){
+  @media (max-width: 1199px) {
+
+    html {
+      overflow-x: hidden;
+    }
+
+    .none {
+      display: none;
+    }
+  }
+
+  @media (max-width: 756px) {
     .navbar-collapse ul {
       max-width: 540px;
     }
   }
 
-  @media (max-width: 600px){
-    nav{
-      .logo{
+  @media (max-width: 600px) {
+    nav {
+      .logo {
         width: 140px;
         margin-top: 0px;
       }
     }
   }
 
-  .open{
+  .open {
     display: block !important;
   }
 }

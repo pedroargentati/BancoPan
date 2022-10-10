@@ -807,6 +807,10 @@ footer {
 
 @media (max-width: 1200px) {
 
+  .pages {
+    height: 156rem !important;
+  }
+
   .table-cloud {
     img {
       width: 364px;
@@ -826,6 +830,12 @@ footer {
 @media (max-width: 767px) {
   .banner {
     margin-top: 50px;
+  }
+
+  .video {
+    max-width: 635px;
+    width: 50%;
+    margin-bottom: 50px;
   }
 
   .row-column-reverse-mobile {
@@ -877,6 +887,19 @@ footer {
     .item {
       margin-bottom: 10px;
     }
+  }
+
+  .tables-dbs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    img {
+      margin-right: 0;
+      margin-bottom: 2rem !important; 
+      width: 95% !important;
+    }
+
   }
 
   .possibilities {
@@ -936,10 +959,22 @@ footer {
     }
   }
 
+  span.detail {
+    display: none;
+  }
+
+
   .plans {
+
+   
+    .buttons-download {
+      display: flex;
+      flex-direction: column;
+    }
+
     h2 {
       font-size: 36px;
-      margin-top: -20px;
+      margin-top: 27rem;
     }
 
     .item {
