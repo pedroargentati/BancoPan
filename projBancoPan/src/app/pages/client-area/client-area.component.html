@@ -22,7 +22,7 @@
     </div>
 
     <div class="form-login" *ngIf="step===2">
-        <img src="../../../assets/images/undraw_updates_re_o5af.svg" alt="">
+        <img style="margin-left: 70px; margin-bottom: 64px;" src="../../../assets/images/undraw_fill_form_re_cwyf.svg" alt="">
         <div class="linha-vertical"></div>
 
         <form action="">
@@ -44,40 +44,51 @@
                 <span class="border-bottom"></span>
             </div>
 
-            <input type="button" (click)="step = 3" value="Entrar">
+            <input type="button" (click)="step = 3" value="Próximo">
         </form>
 
     </div>
 
     <div class="form-login" *ngIf="step === 3">
-        <img src="../../../assets/images/undraw_updates_re_o5af.svg" alt="">
+        <img style="margin-bottom: 11rem; margin-left: 6rem;" src="../../../assets/images/undraw_resume_re_hkth.svg" alt="">
         <div class="linha-vertical"></div>
 
         <form action="">
             <h1>Atualize seus dados!</h1>
             <div class="input-group">
-                <input type="text" placeholder="nome campo" class="input" required>
+                <input type="date" placeholder="Data de nascimento" class="input" required>
                 <span class="border-bottom"></span>
             </div>
             <div class="input-group">
-                <input type="text" placeholder="nome campo" class="input" required>
+                <input type="text" placeholder="CEP" class="input" required>
                 <span class="border-bottom"></span>
             </div>
             <div class="input-group">
-                <input type="text" placeholder="nome campo" class="input" required>
+                <input type="text" placeholder="Endereço" class="input" required>
                 <span class="border-bottom"></span>
             </div>
             <div class="input-group">
-                <input type="text" placeholder="nome campo" class="input" required>
+                <input type="text" placeholder="Número" class="input" required>
                 <span class="border-bottom"></span>
             </div>
 
-            <input type="button" (click)="step = 4" value="Entrar">
+            <input type="button" (click)="step = 4" value="Concluir">
         </form>
-
     </div>
+
+    <div class="form-login" *ngIf="step === 4">
+        <img style="margin-bottom: 11rem; margin-left: 6rem;" src="../../../assets/images/undraw_order_confirmed_re_g0if (1).svg" alt="">
+        <div class="linha-vertical"></div>
+
+        <div class="success-update">
+            <h1>Dados atualizados com sucesso!</h1>
+            <button>Ir para Área do Cliente</button>
+        </div>
+    </div>
+
     <footer>
-        <h1>Direitos reservado @The Interns</h1>
-     </footer>
+        <h2 class="footer-content">Copyright &#174; 2022 All rights reserved </h2>
+        <h2 class="footer-content">The Interns</h2>
+    </footer>
 </div>
 
