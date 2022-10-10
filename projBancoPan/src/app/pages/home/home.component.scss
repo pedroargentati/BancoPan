@@ -12,6 +12,27 @@
     margin-bottom: 40px;
   }
 
+  .nomes{
+    ul{
+      li{ 
+        span{
+          color: #00C5FF;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+
+  .img-group{
+    margin-top: 5rem;
+  }
+
+  .img-mobile-group{
+    display: none;
+  }
+  
+
+
   p {
     color: #666666;
     font-size: 20px;
@@ -824,6 +845,20 @@ footer {
   .channels {
     margin-top: -160px;
   }
+
+  .img-group{
+    display: none !important;
+  }
+
+
+  .imagem-mobile{
+    display: none;
+  }
+
+  .img-mobile-group{
+    display: block;
+  }
+
 
 }
 
